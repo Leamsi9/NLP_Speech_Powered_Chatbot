@@ -7,7 +7,7 @@ The chatbots are built on a much simplified version of the Harry bot template cr
 
 
 The GUI:  
-The GUI is a simple webpage with an image avatar. It has a text interface, and a microphone interface, using the Web Speech Api. I drew on the Alaric bot repo for inspiration on the speech functionality, and the ChatScript php template for the UI. In keeping with the Star Wars theme I have used CSS to replicate the iconic intro text from the movies, but separated the file so you can use your own styling.
+Best viewed on Chrome. The GUI is a simple webpage with an image avatar. It has a text interface, and a microphone interface, using the Web Speech Api. I drew on the Alaric bot repo for inspiration on the speech functionality, and the ChatScript php template for the UI. In keeping with the Star Wars theme I have used CSS to replicate the iconic intro text from the movies, but separated the file so you can use your own styling.
 
 Issues:  
 This was intended as proof of concept demo rather than a full app. Accordingly a few limitations: 
@@ -15,7 +15,9 @@ This was intended as proof of concept demo rather than a full app. Accordingly a
 
 2) Chat log:  my Star Wars animation appends every new text to the line before. Beause the text is auto-scrolling, once it gets past view future chats are not visible. This can happen with large pauses. It does not affect the functionality at all, just the visibility.
 
-3) Sound:  When the microphone is on, it picks up all speech. This means that if you are not using headphones, you have to pause the microphone button after you have voiced your answers, otherwise the bot will pick up its own voice responses as answers. If you have headphones you can just leave the microphone button active and chat, using the keyboard to text any questions not starting with "what"
+3) Sound:  When the microphone is on, it picks up all speech. This means that if you are not using headphones, you have to pause the microphone button after you have voiced your answers, otherwise the bot will pick up its own voice responses as answers. If you have headphones you can just leave the microphone button active and chat, using the keyboard to text any questions not starting with "what".
+
+4) Browser compatbility: Currently only works on chrome. Should be able to expand this by modifying specch_chatbot.js.
 
 
 Installation:  
@@ -24,7 +26,7 @@ Chatbots:
 The chatbots require the ChatScript repo installed (https://github.com/bwilcox-1234/ChatScript), and use the Harry configuration to run. The Luke/Lucas chatbot folders and accompannying files should be pasted into the RAWDATA folder of the ChatScript repo.
 
 The GUI:  
-The ui.php file is geared up to run locally. In order to do so you need to simulate a ChatScript server. You do this by simply running the LocalServer.bat file in the batch files folder of the ChatScript repo. It will by default use port 1024 and IP 0.0.0.0. You will need to configure the ui.php file with your own local IP address.
+The ui.php file is geared up to run locally. In order to do so you need to simulate a ChatScript server. You do this by simply running localServer.bat in ChatScript’s SERVER BATCH FILES folder. It will by default use port 1024 and IP 0.0.0.0. You will need to configure the ui.php file with your own local IP address.
 
 The Web Speech API:  
 The current demo is configured for a Windows machine, and the Web Speech API uses the voices available to your computer. In the speech_chatbot.js file, on line 14, the voice to use is defined, by array index number, e.g.:
@@ -33,3 +35,6 @@ You can change the number to access your preferred voice. If you are using OSx t
 
 Comments and suggestions:  
 Let me know any ideas and improvements by raising an issue on github, as I may use this as a basis for more serious applications. Also let me know if you use it for anything. It is good to know!
+
+Future improvements:
+Began to work on integrating an animated gif that moves its mouth when the bot is speaking. Using as inspiration.
