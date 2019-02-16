@@ -23,7 +23,7 @@ This was intended as proof of concept demo rather than a full app. Accordingly a
 Installation:  
 
 Chatbots:  
-The chatbots require the ChatScript repo installed (https://github.com/bwilcox-1234/ChatScript), and use the Harry configuration to run. The Luke/Lucas chatbot folders and accompannying files should be pasted into the RAWDATA folder of the ChatScript repo.
+The chatbots require the ChatScript repo installed (https://github.com/ChatScript/ChatScript), and use the Harry configuration to run. The Luke/Lucas chatbot folders and accompannying files should be pasted into the RAWDATA folder of the ChatScript repo.
 
 The GUI:  
 The ui.php file is geared up to run locally. In order to do so you need to simulate a ChatScript server. You do this by simply running localServer.bat in ChatScript’s SERVER BATCH FILES folder. It will by default use port 1024 and IP 0.0.0.0. You will need to configure the ui.php file with your own local IP address.
